@@ -1,5 +1,5 @@
 docker-build:
-	docker build . -t sam/keycloak-custom
+	docker build . -t cogniti/keycloak-custom-theme
 
 docker-run:
 	docker run -d \
@@ -14,7 +14,7 @@ docker-run:
 	-e DB_VENDOR=POSTGRES \
 	-e DB_ADDR=postgres \
 	-e PROXY_ADDRESS_FORWARDING=true \
-	-it sam/keycloak-custom:latest
+	-it cogniti/keycloak-custom-theme:latest
 
 docker-stop:
 	docker stop keycloak-custom
@@ -23,4 +23,4 @@ docker-delete:
 	docker rm keycloak-custom
 
 docker-image-delete:
-	docker rmi sam/keycloak-custom
+	docker rmi cogniti/keycloak-custom-theme
