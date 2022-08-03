@@ -8,7 +8,9 @@ docker-compose-up:
 
 docker-run:
 	docker run -d \
-	-p 8080:8080 \
+#	-p 8080:8080 \
+	-p 9990:8080 \
+  	-p 9991:8443 \
 	--name keycloak-custom \
 	--net keycloak-network \
 	-e KEYCLOAK_USER=admin \

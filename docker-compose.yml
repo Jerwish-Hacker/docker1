@@ -13,7 +13,7 @@ services:
       POSTGRES_PASSWORD: password
       PGDATA: /var/lib/postresql/data/pgdata
     ports:
-    - 5432:5432
+    - 5434:5434
     container_name: local_postgres
   keycloak:
     image: cogniti/keycloak-custom-theme
@@ -31,4 +31,5 @@ services:
       KEYCLOAK_PASSWORD: password
       PROXY_ADDRESS_FORWARDING: 'true'
     ports:
-    - 8282:8080
+    - 8080:8080
+#    - 8282:8080

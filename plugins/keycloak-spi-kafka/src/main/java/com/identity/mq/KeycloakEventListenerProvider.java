@@ -10,7 +10,6 @@ import org.keycloak.models.KeycloakSession;
 
 import javax.enterprise.concurrent.ManagedExecutorService;
 import java.util.List;
-import java.util.Objects;
 
 import static java.util.Objects.nonNull;
 
@@ -31,7 +30,7 @@ public class KeycloakEventListenerProvider implements EventListenerProvider {
     public void onEvent(Event event) {
         if (nonNull(excludedEvents) && !excludedEvents.contains(event.getType())) {
             log.debug("Received event {}, with details: {}", event.getType(), event.getDetails());
-            mes.submit(new KeycloakEventListener(event, session));
+            mes.submit(new KeycloakEventListener(event));
             return;
         }
         log.debug("Ignoring event type: {}", event.getType());
@@ -39,7 +38,12 @@ public class KeycloakEventListenerProvider implements EventListenerProvider {
 
     @Override
     public void onEvent(AdminEvent event, boolean includeRepresentation) {
-        log.info("Ignoring admin event {}, with operation: {}", event.getResourceType(), event.getOperationType());
+        if (nonNull(excludedEvents) && !excludedEvents.contains(event.getResourceType())) {
+            log.info("Ignoring admin event {}, with operation: {}", event.getResourceType(), event.getRepresentation());
+            mes.submit(new KeycloakAdminEventListener(event));
+            return;
+        }
+        log.debug("Ignoring event type: {}", event.getResourceType());
     }
 
 }
