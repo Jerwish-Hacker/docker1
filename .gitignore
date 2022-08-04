@@ -4,6 +4,12 @@
 .AppleDouble
 .LSOverride
 
+target
+target/docker
+target/maven-archiver
+target/test-classes
+target/identity-manager-service-1.0.0-SNAPSHOT-docker-info.jar
+
 # Icon must end with two \r
 Icon
 

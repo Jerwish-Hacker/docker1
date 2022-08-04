@@ -41,10 +41,10 @@ public class KeycloakAdminEventListener implements Callable<RecordMetadata>, Man
             identityEvent = new UnSupportedEvent();
         }
         if(identityEvent instanceof IdentityEvent){
-            return getMetadata("com.user.identity.events.t");
+            return getMetadata("com.identity.admin.events.t");
 
         } else {
-            String topic = new StringBuilder("com.misc.identity.")
+            String topic = new StringBuilder("com.misc.identity.admin.")
                     .append (event.getResourceType().name().toLowerCase())
                     .append (".events.t").toString();
 

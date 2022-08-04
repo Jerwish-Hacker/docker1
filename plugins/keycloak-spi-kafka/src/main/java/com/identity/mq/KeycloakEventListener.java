@@ -44,9 +44,9 @@ public class KeycloakEventListener implements Callable<RecordMetadata>, ManagedT
 
 		IIdentityEvent identityEvent = getIdentityEvent(event);
 		if(identityEvent instanceof IdentityEvent){
-			return getMetadata("com.user.identity.events.t");
+			return getMetadata("com.identity.common.events.t");
 		} else {
-			String topic = new StringBuilder()
+			String topic = new StringBuilder("com.misc.identity.common.")
 					.append (event.getType().name().toLowerCase())
 					.append (".events.t").toString();
 
