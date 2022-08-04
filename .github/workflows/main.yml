@@ -1,22 +1,22 @@
-name: Build identity-manager-service
+name: Build Identity-Manager-Service
 
 on:
   push:
     branches: [ "main" ]
 
   workflow_dispatch:
-
+  
 jobs:
   build:
     # The type of runner that the job will run on
-    runs-on: productplatform
+    runs-on: self-hosted
 
     steps:
       - uses: actions/checkout@v3
-      #        source /home/github/.nvm/nvm.sh
+      #          source /home/github/.nvm/nvm.sh
       - name: Build with Maven
         run: |
-          source /home/github/buildenv
-          mvn clean install -Ppackage
-      - name: Cleanup dangling and unused docker resources
+         source /home/github/buildenv
+         mvn clean install -Ppackage
+      - name: Cleanup dangling and unused docker resources 
         run: docker system prune --force
