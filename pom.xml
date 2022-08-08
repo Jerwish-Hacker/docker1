@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.identity.manager</groupId>
     <artifactId>identity-manager-service</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>identity-manager-service</name>
     <description>Product domain service that adheres to technical standards</description>

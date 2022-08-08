@@ -406,3 +406,10 @@ input:focus {
   box-shadow: 0 10px 25px #7b68ee80;
   background-color: #7b68ee;
 }
+
+.colored-text-pink {
+  background: -moz-linear-gradient(left,#ffbf27 0,#ff16a6 100%);
+  background: linear-gradient(90deg,#ff16a6 0,#7b68ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
