@@ -14,7 +14,7 @@ displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled
                         <div class="${properties.kcRightItem!}">
                             <div class="${properties.kcFormBody!}">
                                 <div class="${properties.kcBrandWrapper}">
-                                    <img src="welcome-content/logo.svg" alt="logo"
+                                    <img src="${properties.kcBrandPartner}" alt="logo"
                                          class="${properties.kcLogo!}">
                                     <img src="${properties.kcBrandPartner}" alt="aws_logo"
                                          class="${properties.kcAwsLogo}">
@@ -29,9 +29,13 @@ displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled
                                                 <#if usernameEditDisabled??>
                                                     <input tabindex="1" id="username"
                                                            class="${properties.kcInputClass!}" name="username"
-                                                           value="${(login.username!'')}" type="text" disabled />
+                                                           value="${(login.username!'')}"
+                                                           placeholder="Email Address"
+                                                           type="text" disabled />
                                                 <#else>
-                                                    <input tabindex="1" id="username"
+                                                    <input tabindex="1"
+                                                           placeholder="Password"
+                                                           id="username"
                                                            class="${properties.kcInputClass!}" name="username"
                                                            value="${(login.username!'')}" type="text" autofocus
                                                            autocomplete="off"

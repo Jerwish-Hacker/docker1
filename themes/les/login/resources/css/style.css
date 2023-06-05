@@ -101,7 +101,6 @@ body {
 
 .login-card .login-btn:hover {
     background-color: #08c4cd;
-    /* background-color: transparent; */
     color: #fff;
 }
 
@@ -137,7 +136,7 @@ nav.login-card-footer-nav {
 }
 
 /*# sourceMappingURL=login.css.map */
-/* addons */
+/* resets */
 .login-pf-page .card-pf {
     border-radius: 9px;
 }
@@ -148,9 +147,10 @@ nav.login-card-footer-nav {
 
 @media (min-width: 768px) {
     .login-pf-page .card-pf {
-        padding: none  !important;
+        padding: none !important;
     }
 }
+
 .login-pf-page .card-pf {
     padding: none !important;
     margin-bottom: 0;
@@ -171,4 +171,29 @@ nav.login-card-footer-nav {
 
 #kc-form-wrapper {
     margin-top: 2rem !important;
+}
+
+.pf-c-alert {
+    margin-top: 1rem;
+}
+
+.brand-wrapper {
+    margin-bottom: 19px;
+    display: flex;
+    flex-direction: row;
+    /* gap: 3rem; */
+    justify-content: space-between;
+}
+
+#kc-content-wrapper {
+    margin-top: 0px !important;
+}
+
+.login-card {
+    border: none !important;
+}
+
+.login-pf-page .card-pf {
+    padding: 0 !important;
+    padding-top: .5rem;
 }
