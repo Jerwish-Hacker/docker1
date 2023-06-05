@@ -17,7 +17,7 @@ displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled
                                     <img src="${properties.kcBrandPartner}" alt="logo"
                                          class="${properties.kcBrandLogo!}">
                                     <img src="${properties.kcBrandPartner}" alt="aws_logo"
-                                         class="${properties.aws_logo}">
+                                         class="${properties.aws_edstart_logo}">
                                 </div>
                             </div>
                             <p class="${properties.kcDescription!}">Sign into your account</p>
