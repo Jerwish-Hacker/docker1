@@ -14,7 +14,7 @@ services:
       PGDATA: /var/lib/postresql/data/pgdata
     ports:
     - 5434:5434
-    container_name: local_postgres
+    container_name: local_postgres_kc
   keycloak:
     image: cogniti/keycloak-custom-theme
     networks:
