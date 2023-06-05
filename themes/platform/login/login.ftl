@@ -4,12 +4,12 @@ displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled
     <#if section="header">
         ${msg("loginAccountTitle")}
     <#elseif section="form">
-        <div id="kc-form">
-            <div class="${properties.container!}">
+        <div id="kc-form" class="${properties.kcMain!}">
+            <div class="${properties.kcLoginContainer!}">
                 <div class="${properties.kcLoginCard!}">
                     <div class="${properties.kcContainerWrapper!}">
                         <div class="${properties.kcLeftItem!}">
-                            <img src="${properties.kcLoginCardCoverImg}" alt="login" class={properties.kcLoginMainImg!}>
+                            <img src="${properties.kcLoginCardCoverImg!}" alt="login" class="${properties.kcLoginMainImg!}">
                         </div>
                         <div class="${properties.kcRightItem!}">
                             <div class="${properties.kcFormBody!}">
@@ -54,6 +54,15 @@ displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled
                                             <input tabindex="4" class="btn btn-block login-btn mb-4" name="login" id="" type="submit" value="Sign In">
                                         </form>
                                     </#if>
+                                    <div >
+                                        <#if realm.resetPasswordAllowed>
+                                            <span><a class="${properties.kcFormOptionsWrapperClass!}" tabindex="5" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a></span>
+                                        </#if>
+                                    </div>
+                                    <nav class="${properties.kcLoginFooterNav}">
+                                        <p>Empowering Education:</p>
+                                        <p>Streamlining Schools with Innovative Technology</p>
+                                    </nav>
                                 </div>
                             </div>
                             <!-- rest thing  -->
@@ -61,26 +70,14 @@ displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled
                             <div id="kc-form-buttons" >
                                 <#if
                                 auth.selectedCredential?has_content>
-                                value="${auth.selectedCredential}"
-                                </#if>/>
-                                <div class="${properties.kcFormOptionsWrapperClass!}">
-                                    <#if realm.resetPasswordAllowed>
-                                        <span><a tabindex="5" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a></span>
-                                    </#if>
-                                </div>
-                                <input tabindex="4"
-                                       class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}"
-                                       name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"
-                                />
-                                <nav class="${properties.kcLoginFooterNav}">
-                                    <p>Empowering Education:</p>
-                                    <p>Streamlining Schools with Innovative Technology</p>
-                                </nav>
+                                    value="${auth.selectedCredential}"
+                                </#if>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         <#if realm.password && social.providers??>
             <div id="kc-social-providers" class="${properties.kcFormSocialAccountSectionClass!}">
