@@ -11,6 +11,8 @@ body {
 
 .brand-wrapper .logo {
     height: 60px;
+    background-image: url('../img/logo.svg');
+    background-size: cover;
 }
 
 .brand-wrapper .aws_logo {

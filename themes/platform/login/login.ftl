@@ -14,8 +14,7 @@ displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled
                         <div class="${properties.kcRightItem!}">
                             <div class="${properties.kcFormBody!}">
                                 <div class="${properties.kcBrandWrapper}">
-                                    <img src="${properties.kcBrandPartnerImg}" alt="logo"
-                                         class="${properties.kcLogo!}">
+                                    <div class="${properties.kcLogo!}" />
                                     <img src="${properties.kcBrandPartner}" alt="aws_logo"
                                          class="${properties.kcAwsLogo}">
                                 </div>
