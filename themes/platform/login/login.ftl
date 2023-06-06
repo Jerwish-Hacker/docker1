@@ -17,8 +17,6 @@ displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled
                                     <img src="${url.resourcesPath}/img/logo.svg" alt="logo"
                                          class="${properties.kcLogo!}">
                                     <img src="${properties.kcBrandPartner}" alt="aws_logo"
-                                         class="${properties.plus}">
-                                    <img src="${properties.kcBrandPartner}" alt="aws_logo"
                                          class="${properties.kcAwsLogo}">
                                 </div>
                                 <p class="${properties.kcDescription!}">Sign into your account</p>
