@@ -32,7 +32,7 @@ displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled
                                                     <input tabindex="1" id="username"
                                                            class="${properties.kcInputClass!}" name="username"
                                                            value="${(login.username!'')}"
-                                                           placeholder="Email Address"
+                                                           placeholder="Email Address or username"
                                                            type="text" disabled />
                                                 <#else>
                                                     <input tabindex="1"
