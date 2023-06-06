@@ -154,12 +154,7 @@ nav.login-card-footer-nav {
 .login-pf-page .card-pf {
     padding: none !important;
     margin-bottom: 0;
-    background-color: transparent !important;
     box-shadow: none;
-}
-
-.card-pf {
-    max-width: none !important;
 }
 
 .login-pf-page {
