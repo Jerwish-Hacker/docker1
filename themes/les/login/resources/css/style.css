@@ -100,8 +100,8 @@ body {
 }
 
 .login-card .login-btn:hover {
-    background-color: #08c4cd;
-    color: #fff;
+    background-color: #004080;
+    background-color: var(--pf-global--primary-color--200);
 }
 
 .login-card .forgot-password-link {
