@@ -1,4 +1,4 @@
-<#import "template.ftl" as layout>
+<#import "login-template.ftl" as layout>
 <@layout.registrationLayout displayMessage=!messagesPerField.existsError('username','password')
 displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled??; section>
     <#if section="header">

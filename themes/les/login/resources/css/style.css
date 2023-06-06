@@ -137,22 +137,32 @@ nav.login-card-footer-nav {
 
 /*# sourceMappingURL=login.css.map */
 /* resets */
-.login-pf-page .card-pf {
+.msd-login-pf-page .msd-login-card-pf {
     border-radius: 9px;
 }
 
+.msd-login-pf-page {
+    padding: 0 !important;
+}
 
-.login-pf-page .card-pf {
+@media (min-width: 768px) {
+    .msd-login-pf-page .msd-login-card-pf {
+        padding: none !important;
+    }
+}
+
+.msd-login-pf-page .msd-login-card-pf {
+    padding: none !important;
     margin-bottom: 0;
     background-color: transparent !important;
     box-shadow: none;
 }
 
-.card-pf {
-    max-width: none !important;
+.msd-login-card-pf {
+    max-width: none !important
 }
 
-.login-pf-page {
+.msd-login-pf-page {
     padding-top: 20px;
     position: relative;
     overflow: auto !important;
@@ -173,7 +183,6 @@ nav.login-card-footer-nav {
     flex-direction: row;
     /* gap: 3rem; */
     justify-content: space-between;
-    align-items: center;
 }
 
 #kc-content-wrapper {
@@ -184,7 +193,7 @@ nav.login-card-footer-nav {
     border: none !important;
 }
 
-.login-pf-page .card-pf {
+.msd-login-pf-page .msd-login-card-pf {
     padding: 0 !important;
     padding-top: .5rem;
 }
