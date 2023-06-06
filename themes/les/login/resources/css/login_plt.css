@@ -2,32 +2,7 @@
   --theme-main-color: #7b68ee;
   --theme-main-color-dark: #5f48ea;
   --theme-main-color-light: #d3cdf9;
-  --pf-global--active-color--100: #06c;
-  --pf-global--active-color--200: #bee1f4;
-  --pf-global--active-color--300: #73bcf7;
-  --pf-global--active-color--400: #2b9af3;
-  --pf-global--disabled-color--100: #737679;
-  --pf-global--disabled-color--200: #d2d2d2;
-  --pf-global--disabled-color--300: #ededed;
-  --pf-global--primary-color--100: #d3cdf9;
-  --pf-global--primary-color--200: #7b68ee;
-  --pf-global--primary-color--light-100: #d3cdf9;
-  --pf-global--primary-color--dark-100: #5f48ea;
-  --pf-global--secondary-color--100: #737679;
-  --pf-global--default-color--100: #73c5c5;
-  --pf-global--default-color--200: #009596;
-  --pf-global--default-color--300: #003737;
-  --pf-global--success-color--100: #92d400;
-  --pf-global--success-color--200: #486b00;
-  --pf-global--info-color--100: #73bcf7;
-  --pf-global--info-color--200: #004368;
-  --pf-global--warning-color--100: #f0ab00;
-  --pf-global--warning-color--200: #795600;
-  --pf-global--danger-color--100: #c9190b;
-  --pf-global--danger-color--200: #a30000;
-  --pf-global--danger-color--300: #470000;
 }
-
 *,
 *:before,
 *:after {
@@ -49,17 +24,6 @@ div {
 
 nav {
   display: block;
-}
-
-.login-pf-page .card-pf{
-  border-radius: 9px;
-}
-
-.login-pf-page {
-  padding-top: 20px;
-  position: relative;
-  overflow: hidden;
-  height: 100vh;
 }
 
 .login-page-new {
@@ -123,16 +87,15 @@ nav > a {
   position: absolute;
   height: calc(160vh);
   width: 110vw;
-  top: 54vh;
+  top: 31vh;
   left: 0;
   overflow: hidden;
   pointer-events: none;
-  background: url(../img/login__bg.86540.svg)
-    center 10px no-repeat;
+  background: url(https://app-cdn.clickup.com/login__bg.8e44616319b55ac1.svg)
+  center 10px no-repeat;
   background-size: cover;
   border-radius: 290px 280px 0px 0px;
   transform: rotate(-10deg);
-  z-index: -1;
 }
 
 .login-page-new__main-bg:before {
@@ -143,7 +106,7 @@ nav > a {
   height: 300%;
   top: -100%;
   left: -50%;
-  background: url(../img/login__bg.86540.svg);
+  background: url(https://app-cdn.clickup.com/login__bg.8e44616319b55ac1.svg);
   transform: rotate(-28deg);
 }
 .login-page-new__main-bg:after {
@@ -154,8 +117,8 @@ nav > a {
   height: 100%;
   top: 0;
   left: 0;
-  background: url(../img/login__bg.86540.svg)
-    center top no-repeat;
+  background: url(https://app-cdn.clickup.com/login__bg.8e44616319b55ac1.svg)
+  center top no-repeat;
   background-size: 100%;
 }
 
@@ -221,7 +184,7 @@ nav > a {
 .login-page-main-form-row input {
   transition: border-color 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, roboto,
-    Helvetica Neue, helvetica, arial, sans-serif;
+  Helvetica Neue, helvetica, arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1;
@@ -291,7 +254,7 @@ input:focus {
   background-color: #7b68ee;
   height: 50px;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, roboto,
-    Helvetica Neue, helvetica, arial, sans-serif;
+  Helvetica Neue, helvetica, arial, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -396,20 +359,6 @@ input:focus {
   padding-top: 4px;
 }
 
-.card-pf {
-  border-top: 0px;
-}
-
 .pf-c-button.pf-m-primary.pf-m-block.btn-lg{
   height: 50px;
-  border-radius: 9px;
-  box-shadow: 0 10px 25px #7b68ee80;
-  background-color: #7b68ee;
-}
-
-.colored-text-pink {
-  background: -moz-linear-gradient(left,#ffbf27 0,#ff16a6 100%);
-  background: linear-gradient(90deg,#ff16a6 0,#7b68ee);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
