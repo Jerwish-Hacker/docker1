@@ -194,7 +194,7 @@ nav.login-card-footer-nav {
     border: none !important;
 }
 
-.login-pf-page .card-pf {
+.login-pf-page .card-pf .login-card-pf{
     padding: 0 !important;
     padding-top: .5rem;
 }
