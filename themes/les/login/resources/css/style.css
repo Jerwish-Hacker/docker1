@@ -183,6 +183,7 @@ nav.login-card-footer-nav {
     flex-direction: row;
     /* gap: 3rem; */
     justify-content: space-between;
+    align-items: center;
 }
 
 #kc-content-wrapper {

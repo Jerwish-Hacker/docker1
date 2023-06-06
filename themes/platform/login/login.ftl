@@ -17,6 +17,8 @@ displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled
                                     <img src="${url.resourcesPath}/img/logo.svg" alt="logo"
                                          class="${properties.kcLogo!}">
                                     <img src="${properties.kcBrandPartner}" alt="aws_logo"
+                                         class="${properties.plus}">
+                                    <img src="${properties.kcBrandPartner}" alt="aws_logo"
                                          class="${properties.kcAwsLogo}">
                                 </div>
                                 <p class="${properties.kcDescription!}">Sign into your account</p>
@@ -34,7 +36,7 @@ displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled
                                                            type="text" disabled />
                                                 <#else>
                                                     <input tabindex="1"
-                                                           placeholder="Password"
+                                                           placeholder="Email Address"
                                                            id="username"
                                                            class="${properties.kcInputClass!}" name="username"
                                                            value="${(login.username!'')}" type="text" autofocus
@@ -51,6 +53,7 @@ displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled
                                             </div>
                                             <div class="${properties.kcFormGroupClass!}">
                                                 <input tabindex="2" id="password"
+                                                       placeholder="Password"
                                                        class="${properties.kcInputClass!}" name="password"
                                                        type="password" autocomplete="off"
                                                        aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>" />
