@@ -4,87 +4,88 @@ displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled
     <#if section="header">
         ${msg("loginAccountTitle")}
     <#elseif section="form">
-        <div id="kc-form" class="${properties.kcMain!}">
-            <div class="${properties.kcLoginContainer!}">
-                <div class="${properties.kcLoginCard!}">
-                    <div class="${properties.kcContainerWrapper!}">
-                        <div class="${properties.kcLeftItem!}">
-                            <img src="${properties.kcLoginCardCoverImg!}" alt="login" class="${properties.kcLoginMainImg!}">
-                        </div>
-                        <div class="${properties.kcRightItem!}">
-                            <div class="${properties.kcFormBody!}">
-                                <div class="${properties.kcBrandWrapper}">
-                                    <img src="${url.resourcesPath}/img/logo.svg" alt="logo"
-                                         class="${properties.kcLogo!}">
-                                    <img src="${properties.kcPlusLogo}" alt="aws_logo"
-                                         class="${properties.kcPlus}">
-                                    <img src="${properties.kcBrandPartner}" alt="aws_logo"
-                                         class="${properties.kcAwsLogo}">
-                                </div>
-                                <p class="${properties.kcDescription!}">Sign into your account</p>
-                                <div id="kc-form-wrapper">
-                                    <#if realm.password>
-                                        <form id="kc-form-login" onsubmit="login.disabled = true; return true;"
-                                              action="${url.loginAction}" method="post"
-                                        >
-                                            <div class="${properties.kcFormGroupClass!}">
-                                                <#if usernameEditDisabled??>
-                                                    <input tabindex="1" id="username"
-                                                           class="${properties.kcInputClass!}" name="username"
-                                                           value="${(login.username!'')}"
-                                                           placeholder="Email or Username"
-                                                           type="text" disabled />
-                                                <#else>
-                                                    <input tabindex="1"
-                                                           placeholder="Email or Username"
-                                                           id="username"
-                                                           class="${properties.kcInputClass!}" name="username"
-                                                           value="${(login.username!'')}" type="text" autofocus
-                                                           autocomplete="off"
-                                                           aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>" />
-                                                    <#if messagesPerField.existsError('username','password')>
-                                                        <span id="input-error"
-                                                              class="${properties.kcInputErrorMessageClass!}"
-                                                              aria-live="polite">
-                                                                    ${kcSanitize(messagesPerField.getFirstError('username','password'))?no_esc}
-                                                                </span>
-                                                    </#if>
-                                                </#if>
-                                            </div>
-                                            <div class="${properties.kcFormGroupClass!}">
-                                                <input tabindex="2" id="password"
-                                                       placeholder="Password"
-                                                       class="${properties.kcInputClass!}" name="password"
-                                                       type="password" autocomplete="off"
-                                                       aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>" />
-                                            </div>
-                                            <input tabindex="4" class="btn btn-block login-btn mb-4" name="login" id="" type="submit" value="Sign In">
-                                        </form>
-                                    </#if>
-                                    <div >
-                                        <#if realm.resetPasswordAllowed>
-                                            <span><a class="${properties.kcFormOptionsWrapperClass!}" tabindex="5" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a></span>
-                                        </#if>
-                                    </div>
-                                    <nav class="${properties.kcLoginFooterNav}">
-                                        <p>Empowering Education:</p>
-                                        <p>Streamlining Schools with Innovative Technology</p>
-                                    </nav>
-                                </div>
+        <div class="${properties.kcLoginFormCardClass!}">
+            <div id="kc-form" class="${properties.kcMain!}">
+                <div class="${properties.kcLoginContainer!}">
+                    <div class="${properties.kcLoginCard!}">
+                        <div class="${properties.kcContainerWrapper!}">
+                            <div class="${properties.kcLeftItem!}">
+                                <img src="${properties.kcLoginCardCoverImg!}" alt="login" class="${properties.kcLoginMainImg!}">
                             </div>
-                            <!-- rest thing  -->
+                            <div class="${properties.kcRightItem!}">
+                                <div class="${properties.kcFormBody!}">
+                                    <div class="${properties.kcBrandWrapper}">
+                                        <img src="${url.resourcesPath}/img/logo.svg" alt="logo"
+                                             class="${properties.kcLogo!}">
+                                        <img src="${properties.kcPlusLogo}" alt="aws_logo"
+                                             class="${properties.kcPlus}">
+                                        <img src="${properties.kcBrandPartner}" alt="aws_logo"
+                                             class="${properties.kcAwsLogo}">
+                                    </div>
+                                    <p class="${properties.kcDescription!}">Sign into your account</p>
+                                    <div id="kc-form-wrapper">
+                                        <#if realm.password>
+                                            <form id="kc-form-login" onsubmit="login.disabled = true; return true;"
+                                                  action="${url.loginAction}" method="post"
+                                            >
+                                                <div class="${properties.kcFormGroupClass!}">
+                                                    <#if usernameEditDisabled??>
+                                                        <input tabindex="1" id="username"
+                                                               class="${properties.kcInputClass!}" name="username"
+                                                               value="${(login.username!'')}"
+                                                               placeholder="Email or Username"
+                                                               type="text" disabled />
+                                                    <#else>
+                                                        <input tabindex="1"
+                                                               placeholder="Email or Username"
+                                                               id="username"
+                                                               class="${properties.kcInputClass!}" name="username"
+                                                               value="${(login.username!'')}" type="text" autofocus
+                                                               autocomplete="off"
+                                                               aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>" />
+                                                        <#if messagesPerField.existsError('username','password')>
+                                                            <span id="input-error"
+                                                                  class="${properties.kcInputErrorMessageClass!}"
+                                                                  aria-live="polite">
+                                                                        ${kcSanitize(messagesPerField.getFirstError('username','password'))?no_esc}
+                                                                    </span>
+                                                        </#if>
+                                                    </#if>
+                                                </div>
+                                                <div class="${properties.kcFormGroupClass!}">
+                                                    <input tabindex="2" id="password"
+                                                           placeholder="Password"
+                                                           class="${properties.kcInputClass!}" name="password"
+                                                           type="password" autocomplete="off"
+                                                           aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>" />
+                                                </div>
+                                                <input tabindex="4" class="btn btn-block login-btn mb-4" name="login" id="" type="submit" value="Sign In">
+                                            </form>
+                                        </#if>
+                                        <div >
+                                            <#if realm.resetPasswordAllowed>
+                                                <span><a class="${properties.kcFormOptionsWrapperClass!}" tabindex="5" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a></span>
+                                            </#if>
+                                        </div>
+                                        <nav class="${properties.kcLoginFooterNav}">
+                                            <p>Empowering Education:</p>
+                                            <p>Streamlining Schools with Innovative Technology</p>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <!-- rest thing  -->
 
-                            <div id="kc-form-buttons" >
-                                <#if
-                                auth.selectedCredential?has_content>
-                                    value="${auth.selectedCredential}"
-                                </#if>
+                                <div id="kc-form-buttons" >
+                                    <#if
+                                    auth.selectedCredential?has_content>
+                                        value="${auth.selectedCredential}"
+                                    </#if>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
         <#if realm.password && social.providers??>
             <div id="kc-social-providers" class="${properties.kcFormSocialAccountSectionClass!}">
