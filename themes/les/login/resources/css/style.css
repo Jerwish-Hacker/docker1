@@ -137,7 +137,7 @@ nav.login-card-footer-nav {
 
 /*# sourceMappingURL=login.css.map */
 /* resets */
-.login-pf-page .card-pf .login-card-pf{
+.login-pf-page .card-pf {
     border-radius: 9px;
 }
 
@@ -146,19 +146,19 @@ nav.login-card-footer-nav {
 }
 
 @media (min-width: 768px) {
-    .login-pf-page .card-pf .login-card-pf{
+    .login-pf-page .card-pf {
         padding: none !important;
     }
 }
 
-.login-pf-page .card-pf .login-card-pf{
+.login-pf-page .card-pf {
     padding: none !important;
     margin-bottom: 0;
     background-color: transparent !important;
     box-shadow: none;
 }
 
-.card-pf .login-card-pf{
+.card-pf {
     max-width: none !important;
 }
 
@@ -194,7 +194,7 @@ nav.login-card-footer-nav {
     border: none !important;
 }
 
-.login-pf-page .card-pf .login-card-pf{
+.login-pf-page .card-pf {
     padding: 0 !important;
     padding-top: .5rem;
 }
