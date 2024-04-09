@@ -1,4 +1,5 @@
-version: '2'
+---
+version: "3"
 networks:
   keycloak-network:
     name: keycloak-network
@@ -13,7 +14,7 @@ services:
       POSTGRES_PASSWORD: password
       PGDATA: /var/lib/postresql/data/pgdata
     ports:
-    - 5434:5434
+      - 5434:5434
     container_name: local_postgres_kc
   keycloak:
     image: cogniti/keycloak-custom-theme
@@ -29,7 +30,7 @@ services:
       DB_DATABASE: keycloak
       KEYCLOAK_USER: keycloak
       KEYCLOAK_PASSWORD: password
-      PROXY_ADDRESS_FORWARDING: 'true'
+      PROXY_ADDRESS_FORWARDING: "true"
     ports:
-    - 8080:8080
-#    - 8282:8080
+      - 8080:8080
+
